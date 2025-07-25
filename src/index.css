@@ -1,13 +1,126 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(120deg, #0f0f0f, #1f1f2e);
+  color: #fff;
+  height: 100vh;
+  overflow: auto;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.app {
+  text-align: center;
+  padding: 20px;
+}
+
+.app-title {
+  font-size: 2.5rem;
+  color: #f2f2f2;
+  text-shadow: 2px 2px #000;
+}
+
+.task-container {
+  max-width: 600px;
+  margin: auto;
+}
+
+.task-input {
+ 
+
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  gap: 10px;
+}
+.task-input::hover{
+   box-shadow: 5px 5px 5px gray;
+  border-radius: 15px;
+ 
+}
+
+.task-input input {
+  padding: 10px;
+  width: 60%;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background-color: #333;
+  color: white;
+}
+
+.task-input button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: #3a5bd3;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.task-input button:hover {
+  background-color: #2f46b5;
+}
+
+.task-list {
+  list-style: decimal;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.task-item {
+  background: #202030;
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeIn 0.4s ease;
+}
+
+.task-buttons button {
+  margin-left: 10px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.task-buttons button:hover {
+  transform: scale(1.1);
+}
+
+.task-buttons button:nth-child(1) {
+  background-color: #ff4c4c;
+  color: white;
+}
+
+.task-buttons button:nth-child(2) {
+  background-color: #36cfc9;
+  color: black;
+}
+
+.task-buttons button:nth-child(3) {
+  background-color: #ffa940;
+  color: black;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
